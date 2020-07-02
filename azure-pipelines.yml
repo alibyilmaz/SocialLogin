@@ -1,4 +1,15 @@
 # ASP.NET Core (.NET Framework)
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure Pass - Sponsorluk(1)(73eceb07-1930-419d-9637-2da5bd8619f1)'
+    appType: 'webAppLinux'
+    WebAppName: 'socialloginwfacebook'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'ASPDOTNET'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'DOTNETCORE|Latest'
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
