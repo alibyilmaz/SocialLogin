@@ -12,5 +12,6 @@ namespace SocialLogin.Data
             : base(options)
         {
         }
+        public DbSet<SocialLogin.Models.Contact> Contact { get; set; }
     }
 }
